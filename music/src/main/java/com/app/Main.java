@@ -89,6 +89,7 @@ public class Main {
     public void playNext() {
         if (currentTrackIndex < playlist.size() - 1) { // Verifica se não é a última música na playlist
             currentTrackIndex++; // Atualiza o índice da música atual
+            player.close();
             play(); // Chama o método de reprodução novamente para a nova música
         } else {
             System.out.println("Fim da playlist.");
